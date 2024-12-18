@@ -1,0 +1,66 @@
+.gex-main {
+    background: rgb(220, 235, 254);
+}
+
+.gex-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 12px;
+}
+
+.flexaaa {
+    display: flex;
+}
+
+.itemas {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.gex-navBox {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    margin: 12px;
+    padding:  16px 0;
+}
+.gex-navitem{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.gex-navitem img {
+    width: 60px;
+    height: 60px;
+}
+
+.gex-xiaoxi {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 12px;
+}
+.gex-xiaoxi img {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.flexa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gex-xiaoxi .right {
+    flex: 1;
+}
+
+
+.greyColor {
+background: #fff;
+margin-top: 10px;
+padding: 12px;
+}

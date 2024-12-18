@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/gex-common.css">
+    <link rel="stylesheet" href="/css/gex-message.css">
+    <link rel="stylesheet" href="/css/gex-iconfont.css">
+
+</head>
+
+<body>
+    <div class="gex-main">
+        <div>
+            <div class="gex-header">
+                <div style="flex: 1;"></div>
+                <div style="flex: 1; text-align: center;"> 消息(7)</div>
+                <div class="flexaaa" style="flex: 1;">
+                    <div class="itemas">
+                        <div class="iconfont icon-kefu"></div>
+                        客服
+                    </div>
+                    <div class="itemas">
+                        <div class="iconfont icon-shezhi"></div>
+                        设置
+                    </div>
+                </div>
+            </div>
+            <ul class="gex-navBox">
+                <li class="gex-navitem">
+                    <img src="/image/t1.jpg" alt="">
+                    订单出行
+                </li>
+                <li class="gex-navitem">
+                    <img src="/image/t2.jpg" alt="">
+                    互动消息
+                </li>
+                <li class="gex-navitem">
+                    <img src="/image/t3.jpg" alt="">
+                    账户通知
+                </li>
+                <li class="gex-navitem">
+                    <img src="/image/t4.jpg" alt="">
+                    会员服务
+                </li>
+            </ul>
+
+            <div id="gex-messageContainer"></div>
+            <div style="text-align: center; padding: 12px; color: #999;">没有更多了</div>
+        </div>
+
+        <div class="gex-tab-container">
+            <ul class="gex-icon_lists dib-box">
+                <li class="dib">
+                    <a href="/index.html">
+                        <span class="icon iconfont icon-icon-1"></span>
+                        <div class="name">首页</div>
+                    </a>
+                </li>
+                <li class="dib">
+                    <a class="main" href="message.html">
+                        <span class="icon iconfont icon-xiaoxi"></span>
+                        <div class="name">消息</div>
+                    </a>
+                </li>
+                <li class="dib">
+                    <span class="icon iconfont icon-jiahao2fill" style="font-size: 56px; color: rgb(2,205,219);"></span>
+                </li>
+                <li class="dib">
+                    <span class="icon iconfont icon-xingchengshouji"></span>
+                    <div class="name">行程</div>
+                </li>
+                <li class="dib">
+                    <a href="user.html">
+                        <span class="icon iconfont icon-jingxuan"></span>
+                        <div class="name">我的</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 模拟的消息数据
+        const messages = [
+            {
+                title: "消息号动态",
+                time: "10:10",
+                content: "[40条]程信分:便捷旅程!您的信用生活...",
+                detail: "这是关于您信用生活的详细信息。"
+            },
+            {
+                title: "活动优惠",
+                time: "10:10",
+                content: "上海浦东丽晶酒店，豪华房低至5.4折起!",
+                detail: "这是关于活动优惠的详细信息。"
+            },
+            {
+                title: "火车票管家-国内",
+                time: "10:10",
+                content: "小游:您好，如需取消订单，请点击下方...",
+                detail: "这是关于火车票管家的详细信息。"
+            }
+        ];
+
+        // 渲染消息列表
+        const messageContainer = document.getElementById('gex-messageContainer');
+        messages.forEach((message, index) => {
+            const messageElement = document.createElement('div');
+            messageElement.className = 'gex-xiaoxi';
+            messageElement.innerHTML = `
+                <img src="/image/t${index + 4}.png" alt="">
+                <div class="right">
+                    <div class="flexa">${message.title} <span style="color: #999;">${message.time}</span></div>
+                    <div>${message.content}</div>
+                </div>
+            `;
+            messageElement.addEventListener('click', () => {
+                alert(message.detail); // 点击消息时显示详细信息
+            });
+            messageContainer.appendChild(messageElement);
+        });
+    </script>
+</body>
+
+</html>

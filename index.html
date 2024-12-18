@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/gex-common.css">
+    <link rel="stylesheet" href="css/gex-index.css">
+    <link rel="stylesheet" href="css/gex-iconfont.css">
+</head>
+<body>
+    <div class="gex-main">
+
+        <!-- 顶部 搜索 -->
+        <div class="gex-blue">
+            <div class="gex-headerBox">
+                <div class="gex-search-container">
+                    <input type="text" class="gex-search-input" placeholder="营口本地游·景点·酒店">
+                    <button class="gex-search-button" id="searchButton">搜索</button>
+                </div>
+                <div class="gex-right">
+                    <div class="iconfont icon-ditu"></div>
+                    <div>旅游地图</div>
+                </div>
+            </div>
+            <div class="gex-taglist">
+                <div class="gex-tagitem">酒店3折起</div>
+                <div class="gex-tagitem">青岛</div>
+                <div class="gex-tagitem">火车票</div>
+                <div class="gex-tagitem">威海</div>
+                <div class="gex-tagitem">烟台</div>
+                <div class="gex-tagitem">网红大咖</div>
+            </div>
+        </div>
+
+        <!-- 导航 -->
+        <div class="gex-navBox">
+            <div class="gex-navList">
+                <div class="gex-navItem a"><img src="image/index1.png" alt="">酒店</div>
+                <div class="gex-navItem b"><img src="image/index2.png" alt="">机票</div>
+                <div class="gex-navItem c"><img src="image/index3.png" alt="">火车票</div>
+                <a href="html/strategy.html" class="gex-navItem d"><img src="image/index4.png" alt="">旅游</a>
+                <div class="gex-navItem e"><img src="image/index5.png" alt="">网红打卡</div>
+            </div>
+            <div class="gex-navList aaas">
+                <div class="gex-navItem f"><img src="image/index6.png" alt="">民宿/客栈</div>
+                <div class="gex-navItem g"><img src="image/index7.png" alt="">机票/酒店</div>
+                <div class="gex-navItem h"><img src="image/index8.png" alt="">汽车/船票</div>
+                <div class="gex-navItem i"><img src="image/index9.png" alt="">门票/玩乐</div>
+                <div class="gex-navItem g"><img src="image/index10.png" alt="">民宿/客栈</div>
+            </div>
+            <div class="gex-navList aaas" style="border: 0 0 12px 12px;">
+                <div class="gex-navItem f"><img src="image/index11.png" alt="">酒店套餐</div>
+                <div class="gex-navItem g"><img src="image/index12.png" alt="">推送/包车</div>
+                <div class="gex-navItem h"><img src="image/index13.png" alt="">租车</div>
+                <div class="gex-navItem i"><img src="image/index14.png" alt="">签证/换币</div>
+                <div class="gex-navItem g"><img src="image/index15.png" alt="">借钱/分期</div>
+            </div>
+            <div class="gex-aaaas">
+                <div class="gex-good" style="margin-right: 10px;">
+                    <div class="gex-list">
+                        <div class="gex-item"><img src="image/good1.png" alt="">滑雪</div>
+                        <div class="gex-item"><img src="image/good2.png" alt="">巴黎圣母院</div>
+                    </div>
+                </div>
+                <div class="gex-good">
+                    <div class="gex-list">
+                        <div class="gex-item"><img src="image/good3.png" alt="">全球特价出行</div>
+                        <div class="gex-item"><img src="image/good4.png" alt="">中国爆款团购</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gex-mar">
+            <img class="gex-banner" src="image/top.jpg" alt="">
+        </div>
+
+        <ul class="lists">
+            <!-- 动态生成的列表项将插入在这里 -->
+        </ul>
+
+        <div class="gex-tab-container">
+            <ul class="gex-icon_lists dib-box">
+                <li class="dib">
+                    <a href="index.html">
+                        <span class="icon iconfont icon-icon-1"></span>
+                        <div class="name">首页</div>
+                    </a>
+                </li>
+                <li class="dib">
+                    <a class="main" href="html/message.html">
+                        <span class="icon iconfont icon-xiaoxi"></span>
+                        <div class="name">消息</div>
+                    </a>
+                </li>
+                <li class="dib">
+                    <span class="icon iconfont icon-jiahao2fill" style="font-size: 56px; color: rgb(2,205,219);"></span>
+                </li>
+                <li class="dib">
+                    <span class="icon iconfont icon-xingchengshouji"></span>
+                    <div class="name">行程</div>
+                </li>
+                <li class="dib">
+                    <a href="html/user.html">
+                        <span class="icon iconfont icon-jingxuan"></span>
+                        <div class="name">我的</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // JSON 数据
+            const data = [
+                {
+                    "image": "image/1.png",
+                    "avate": "image/5.png",
+
+                    "title": "上海公司团建旅游全年计划",
+                    "author": "爱玩水的小姑娘",
+                    "views": "53万"
+                },
+                {
+                    "image": "image/2.png",
+                    "avate": "image/6.png",
+
+                    "title": "上海公司团建旅游全年计划",
+                    "author": "小姑娘",
+                    "views": "63万"
+                },
+                {
+                    "image": "image/3.png",
+                    "avate": "image/7.png",
+
+                    "title": "丽江美食攻略",
+                    "author": "火花",
+                    "views": "3万"
+                },
+                {
+                    "image": "image/4.png",
+                    "avate": "image/8.png",
+                    "title": "北京公司团建旅游全年计划",
+                    "author": "爱玩水的小姑娘",
+                    "views": "5万"
+                }
+            ];
+
+            const listsContainer = document.querySelector('.lists');
+            data.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                
+                    <img src="${item.image}" alt="">
+                    <div>${item.title}</div>
+                    <div class="flex">
+                        <img src="${item.avate}" class="samll" alt="">
+                        <h4 style="font-size: 12px;">${item.author}</h4>
+                        <h4 style="font-size: 12px; margin-left: 20px;">${item.views}</h4>
+                    </div>
+                
+
+                `;
+                li.addEventListener('click', () => {
+                    alert(`你点击了: ${item.title}`);
+                });
+                listsContainer.appendChild(li);
+            });
+        });
+    </script>
+</body>
+
+</html>

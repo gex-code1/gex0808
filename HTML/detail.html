@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/gex-common.css">
+    <link rel="stylesheet" href="/css/gex-detail.css">
+    <link rel="stylesheet" href="/css/gex-iconfont.css">
+    <script>
+        // 点赞功能
+        function increaseLikes() {
+            const likeCountElement = document.querySelector('.gex-botom li:nth-child(1) p:nth-child(2)');
+            let currentLikes = parseInt(likeCountElement.innerText);
+            likeCountElement.innerText = currentLikes + 1;
+        }
+
+        // 分享功能
+        function share() {
+            alert("分享成功！请将链接发送给你的朋友。");
+        }
+
+        // 为图标添加事件监听
+        document.addEventListener('DOMContentLoaded', function () {
+            const likeIcon = document.querySelector('.gex-botom li:nth-child(1) p.iconfont');
+            const shareIcon = document.querySelector('.gex-botom li:nth-child(3) p.iconfont');
+
+            likeIcon.addEventListener('click', increaseLikes);
+            shareIcon.addEventListener('click', share);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="gex-big">
+        <div>
+            <div class="gex-header">
+                <div class="flex">
+                    <a href="/index.html" class="iconfont icon-zuojiantou"></a>
+                    <img class="aaccs" src="/image/5.png" alt="">
+                    <span>小东体验馆</span>
+                </div>
+                <div>
+                    <img class="right" src="/image/r1.png" alt="">
+                </div>
+            </div>
+            <div class="gex-mains">
+                <img class="gex-massw" src="/image/imageaaa.jpg" alt="">
+                <div>
+                    <img class="ccw" src="/image/ccw.png" alt="">
+                    <p>在辽宁的鲅鱼圈，发现了一家超值的海景酒店，真是让人惊喜！</p>
+                    <p>酒店的房间宽敞明亮，窗外就是美丽的海景，早晨醒来就能看到日出，简直是享受。</p>
+                    <p>服务态度非常好，前台的工作人员热情周到，让人感到宾至如归，入住体验非常顺利。</p>
+                    <p>酒店内还有丰富的设施，包括游泳池、健身房和餐厅，适合各种需求的游客。</p>
+                    <p>餐厅提供的海鲜自助餐非常新鲜，尤其是当地捕捞的海鲜，味道鲜美，让人回味无穷。</p>
+                    <p>如果你想享受一个放松的假期，这里绝对是个不错的选择！</p>
+                    <p>酒店周边环境优美，步行就能到达沙滩，适合散步和拍照，尤其是黄昏时分，景色迷人。</p>
+                    <p>此外，酒店还提供租车服务，方便游客前往附近的景点，如老虎石海上公园和鲅鱼圈海洋公园。</p>
+                    <p>总之，这家酒店是一个理想的度假胜地，无论是家庭出游还是情侣度假，都能找到适合自己的活动。</p>
+                    <p>如果你计划去辽宁旅游，千万不要错过这家宝藏酒店！</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gex-botom">
+            <input type="text" placeholder="来条神评">
+            <ul>
+                <li>
+                    <p class="iconfont icon-dianzan" style="cursor: pointer;"></p>
+                    <p>36</p>
+                </li>
+                <li>
+                    <p class="iconfont icon-pinglun"></p>
+                    <p>1</p>
+                </li>
+                <li>
+                    <p class="iconfont icon-fenxiang" style="cursor: pointer;"></p>
+                    <p>分享</p>
+                </li>
+                <li>
+                    <p class="iconfont icon-dianzan1"></p>
+                    <p>3</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

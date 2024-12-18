@@ -1,0 +1,37 @@
+body {
+    background: #f5f5f5;
+}
+
+.gex-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px;
+}
+
+.gex-form {
+    margin-top: 12px;
+}
+
+.gex-form .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px;
+}
+
+.gex-form .item img {
+    width: 80px;
+
+}
+button {
+    margin: 80px 12px 12px;
+    border-radius: 8px;
+    background: rgb(2,139,255);
+    height: 40px;
+    line-height: 40px;
+    width: 94%;
+    color: #fff;
+}

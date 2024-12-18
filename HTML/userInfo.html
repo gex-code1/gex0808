@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑个人资料</title>
+    <link rel="stylesheet" href="/css/gex-common.css">
+    <link rel="stylesheet" href="/css/gex-userInfo.css">
+    <link rel="stylesheet" href="/css/gex-iconfont.css">
+</head>
+
+<body>
+    <div class="gex-header">
+        <a href="user.html" class="iconfont icon-zuojiantou"></a>
+        <div>编辑个人信息</div>
+        <div></div>
+    </div>
+    <div class="gex-form">
+        <div class="item">
+            <div>头像</div>
+            <div>
+                <img id="user-avatar" src="/image/b1.png" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div>真实姓名</div>
+            <div>
+                <input type="text" id="real-name" placeholder="请输入真实姓名">
+            </div>
+        </div>
+        <div class="item">
+            <div>社区昵称</div>
+            <div>
+                <input type="text" id="nickname" placeholder="1-30个中英文字符、数字或符号">
+            </div>
+        </div>
+        <div class="item">
+            <p style="color: rgb(175, 175, 90);">180天内可以修改昵称，当前可以修改</p>
+        </div>
+
+        <div class="item">
+            <div>性别</div>
+            <div>
+                <label><input type="radio" name="gender" value="男" checked> 男</label>
+                <label style="margin-left: 50px;"><input type="radio" name="gender" value="女"> 女</label>
+            </div>
+        </div>
+        <div class="item">
+            <div>生日</div>
+            <div>
+                <input type="text" id="birthday" placeholder="请输入生日"> <span class="iconfont icon-youjiantou1"></span>
+            </div>
+        </div>
+        <div class="item">
+            <div>地区</div>
+            <div>
+                <input type="text" id="location" placeholder="请输入地区"> <span class="iconfont icon-youjiantou1"></span>
+            </div>
+        </div>
+        <div class="item">
+            <div>自我介绍</div>
+            <div>
+                <input type="text" id="introduction" placeholder="请输入自我介绍"> <span class="iconfont icon-youjiantou1"></span>
+            </div>
+        </div>
+        <div class="item">
+            <div>头像挂件</div>
+            <div>
+                <input type="text" id="avatar-attachment" placeholder="请输入头像挂件"> <span class="iconfont icon-youjiantou1"></span>
+            </div>
+        </div>
+
+        <button id="save-button">保存</button>
+    </div>
+
+    <script>
+        // 示例 JSON 数据
+        const userData = {
+            avatar: "/image/b1.png",
+            realName: "张三",
+            nickname: "小张",
+            gender: "男",
+            birthday: "1990-01-01",
+            location: "中国",
+            introduction: "这是我的自我介绍。",
+            avatarAttachment: "头像挂件示例"
+        };
+
+        // 渲染用户信息
+        document.getElementById('user-avatar').src = userData.avatar;
+        document.getElementById('real-name').value = userData.realName;
+        document.getElementById('nickname').value = userData.nickname;
+        document.querySelector(`input[name="gender"][value="${userData.gender}"]`).checked = true;
+        document.getElementById('birthday').value = userData.birthday;
+        document.getElementById('location').value = userData.location;
+        document.getElementById('introduction').value = userData.introduction;
+        document.getElementById('avatar-attachment').value = userData.avatarAttachment;
+
+        // 保存按钮点击事件
+        document.getElementById('save-button').addEventListener('click', function() {
+            alert('信息已保存！');
+        });
+    </script>
+</body>
+
+</html>
